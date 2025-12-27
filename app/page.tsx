@@ -1,23 +1,15 @@
-import Link from 'next/link';
-import { BarChart3, Sword, ArrowRight } from 'lucide-react';
+import Link from "next/link";
+import { Video, ArrowRight } from "lucide-react";
 
 export default function Home() {
   const apps = [
     {
-      name: 'Charts',
-      description: 'Create beautiful data visualizations',
-      href: '/charts',
-      icon: BarChart3,
-      gradient: 'from-orange-500 to-red-600',
-      hoverGradient: 'from-orange-600 to-red-700',
-    },
-    {
-      name: 'DPS Comparator',
-      description: 'Compare the damage output of different Blox Fruits builds',
-      href: '/dps-comparator',
-      icon: Sword,
-      gradient: 'from-blue-600 to-indigo-700',
-      hoverGradient: 'from-blue-700 to-indigo-800',
+      name: "Dub",
+      description: "Dub videos to any language",
+      href: "/dub",
+      icon: Video,
+      gradient: "from-green-500 to-teal-600",
+      hoverGradient: "from-green-600 to-teal-700",
     },
   ];
 
@@ -37,7 +29,7 @@ export default function Home() {
 
         {/* Apps Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {apps.map(app => {
+          {apps.map((app) => {
             const Icon = app.icon;
             return (
               <Link
